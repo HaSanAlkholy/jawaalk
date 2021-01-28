@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/vendor/all.min.css" />
+    <link rel="stylesheet" href="./css/vendor/linear.css" />
+    <link rel="stylesheet" href="./css/vendor/aos.css" />
+    <link rel="stylesheet" href="./css/vendor/swiper-bundle.css" />
+    <link rel="stylesheet" href="./css/vendor/bootstrap-4.min.css" />
+    <link rel="stylesheet" href="./css/vendor/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="shortcut icon" href="./images/favicon.png" />
+    <title>اسم اعلان تجارى</title>
+  </head>
+
+  <body class="overflow">
+    <div class="pre-loader">
+      <div class="content">
+        <div class="lds-default">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+
+    <nav>
+      <div class="nav-bottom">
+        <div class="c2">
+          <div class="nav-logo">
+            <a href="#"><img src="./images/logo.svg" alt=".." /></a>
+          </div>
+          <div class="search">
+            <div class="search-content">
+              <form action="./search.html">
+                <input
+                  type="text"
+                  placeholder="عن ماذا تبحث؟"
+                  class="s-input"
+                />
+                <button class="search-btn flex-center">
+                  <img src="./images/icons/search.svg" alt="search" />
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="nav-icons flex-center">
+            <div class="search-btn nav-icon" id="search-btn">
+              <div class="ico-btn">
+                <span class="lnr lnr-magnifier"></span>
+              </div>
+            </div>
+            <div class="nava-btn nav-icon" id="nava-icon">
+              <div class="ico-btn">
+                <span class="lnr lnr-menu"></span>
+              </div>
+            </div>
+            <div class="messages nav-icon" id="nava-icon">
+              <div class="ico-btn">
+                <a href="./acc-msg.html">
+                  <img src="./images/icons/messages.svg" alt=".." />
+                  <div class="green-dot"></div>
+                </a>
+              </div>
+            </div>
+            <div class="notifications nav-icon" id="nava-icon">
+              <div class="ico-btn">
+                <a href="./acc-note.html">
+                  <img src="./images/icons/notification.svg" alt=".." />
+                  <div class="green-dot"></div>
+                </a>
+              </div>
+            </div>
+            <div class="top-setting user nav-icon">
+              <span class="setting-anchor">
+                <a href="./account.html" class="ico-btn">
+                  <img src="./images/icons/user-img.png" alt="user" />
+                  <span class="name">حسابى</span>
+                  <span class="lnr lnr-chevron-down down"></span>
+                </a>
+              </span>
+              <div class="top-dropDown">
+                <a href="./acc-edit.html" class="drop-link fixall">
+                  تعديل بيانات الحساب
+                </a>
+                <a href="./acc-fav.html" class="drop-link fixall"> المفضلة </a>
+                <a href="./acc-note.html" class="drop-link fixall">
+                  الإشعارات
+                </a>
+                <a href="./acc-msg.html" class="drop-link fixall"> الرسائل </a>
+                <a href="./home.html" class="drop-link fixall">
+                  الموقع الجغرافي
+                </a>
+                <a href="./index.html" class="drop-link fixall"> تسجيل خروج </a>
+              </div>
+            </div>
+            <div class="add">
+              <a href="./add.html" type="submit" class="s-linear s-btn s-btns">
+                اضف إعلانك
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nava-container">
+        <div class="c2">
+          <div class="nava" id="nava">
+            <div class="nava-content">
+              <div class="nava-head">
+                <div class="nava-close" id="close-nava">
+                  <span class="lnr lnr-cross"></span>
+                </div>
+              </div>
+              <ul>
+                <li><a href="./home.html"> الرئيسية</a></li>
+                <li class="top-setting sm-slide slide sm-link">
+                  <span class="setting-anchor drop">
+                    الحساب
+                    <span class="lnr lnr-chevron-down down"></span>
+                  </span>
+                  <div class="top-dropDown">
+                    <a href="#" class="drop-link fixall">
+                      تعديل بيانات الحساب
+                    </a>
+                    <a href="./acc-edit.html" class="drop-link fixall">
+                      تعديل بيانات الحساب
+                    </a>
+                    <a href="./acc-fav.html" class="drop-link fixall">
+                      المفضلة
+                    </a>
+                    <a href="./acc-note.html" class="drop-link fixall">
+                      الإشعارات
+                    </a>
+                    <a href="./acc-msg.html" class="drop-link fixall">
+                      الرسائل
+                    </a>
+                    <a href="./home.html" class="drop-link fixall">
+                      الموقع الجغرافي
+                    </a>
+                    <a href="./index.html" class="drop-link fixall">
+                      تسجيل خروج
+                    </a>
+                  </div>
+                </li>
+                <li><a href="./about.html"> من نحن؟</a></li>
+                <li><a href="./haraj.html"> حراج</a></li>
+                <li><a href="#"> محلات البيع</a></li>
+                <li><a href="./stores.html"> المتاجر الإلكترونية</a></li>
+                <li><a href="#"> البرمجة والصيانة</a></li>
+                <li><a href="#"> بيع الجملة</a></li>
+                <li><a href="#"> الشروط والأحكام</a></li>
+                <li><a href="#"> اتصل بنا</a></li>
+              </ul>
+              <div class="add">
+                <a
+                  href="./add.html"
+                  type="submit"
+                  class="s-linear s-btn s-btns"
+                >
+                  اضف إعلانك
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="breadcrumb-container">
+      <div class="c2">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="./index.html">الرئيسية</a></li>
+          <li class="breadcrumb-item">
+            <a href="./stores.html">المتاجر الالكترونية</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            اسم اعلان تجارى
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <section class="store-page section-margin start">
+      <div class="c2">
+        <div class="store-head">
+          <div class="store-info">
+            <div class="store-logo">
+              <img src="./images/store/store.jpg" alt=".." />
+            </div>
+            <h2 class="store-name">ركن الشريف للتجارة</h2>
+            <div class="store-btns flex-center">
+              <a href="#" class="red-btn s-btns">
+                <span class="lnr lnr-heart"></span>
+              </a>
+              <a href="#" class="green-btn s-linear s-linkbtn s-btns">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="#" class="blue-btn s-linear s-linkbtn s-btns">
+                <img src="./images/icons/call.svg" alt=".." />
+              </a>
+            </div>
+          </div>
+          <div class="map">
+            <iframe
+              src="https://maps.google.com/maps?q=mansoura&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              class="hide-top"
+            ></iframe>
+          </div>
+        </div>
+        <div class="store-body">
+          <p>
+            هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية
+            تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى
+            النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً
+            أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص.
+            بينما تعمل جميع مولّدات نصوص لوريم إيبسوم على الإنترنت على إعادة
+            تكرار مقاطع من نص لوريم إيبسوم نفسه عدة مرات بما تتطلبه الحاجة، يقوم
+            مولّدنا هذا باستخدام كلمات من قاموس يحوي على أكثر من 200 كلمة لا
+            تينية، مضاف إليها مجموعة من الجمل النموذجية، لتكوين نص لوريم إيبسوم
+            ذو شكل منطقي قريب إلى النص الحقيقي. وبالتالي يكون النص الناتح خالي
+            من التكرار، أو أي كلمات أو عبارات غير لائقة أو ما شابه. وهذا ما
+            يجعله أول مولّد نص لوريم إيبسوم حقيقي على الإنترنت
+          </p>
+        </div>
+        <div class="products">
+          <div class="product">
+            <div class="product-img">
+              <a href="#">
+                <img src="./images/products/4.jpg" alt="product" />
+              </a>
+            </div>
+            <div class="product-disc">
+              <h5>
+                <a href="#">اسم إعلان تجريبي</a>
+              </h5>
+              <div class="product-btns flex-center">
+                <div class="favourite">
+                  <span class="lnr lnr-heart"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-img">
+              <a href="#">
+                <img src="./images/products/1.jpg" alt="product" />
+              </a>
+            </div>
+            <div class="product-disc">
+              <h5>
+                <a href="#">اسم إعلان تجريبي</a>
+              </h5>
+              <div class="product-btns flex-center">
+                <div class="favourite">
+                  <span class="lnr lnr-heart"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-img">
+              <a href="#">
+                <img src="./images/products/2.jpg" alt="product" />
+              </a>
+            </div>
+            <div class="product-disc">
+              <h5>
+                <a href="#">اسم إعلان تجريبي</a>
+              </h5>
+              <div class="product-btns flex-center">
+                <div class="favourite">
+                  <span class="lnr lnr-heart"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-img">
+              <a href="#">
+                <img src="./images/products/3.jpg" alt="product" />
+              </a>
+            </div>
+            <div class="product-disc">
+              <h5>
+                <a href="#">اسم إعلان تجريبي</a>
+              </h5>
+              <div class="product-btns flex-center">
+                <div class="favourite">
+                  <span class="lnr lnr-heart"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="search-form" id="search-form">
+      <div class="close-search" id="close-search">
+        <span class="lnr lnr-cross"></span>
+      </div>
+      <div class="search">
+        <div class="search-content">
+          <form action="./search.html">
+            <input type="text" placeholder="عن ماذا تبحث؟" class="s-input" />
+            <button class="search-btn flex-center">
+              <img src="./images/icons/search.svg" alt="search" />
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="c2">
+        <div class="footer-logo">
+          <a href="#"><img src="./images/logo.svg" alt=".." /></a>
+        </div>
+        <div class="footer-nav">
+          <ul class="flex-center">
+            <li><a href="#">من نحن ؟</a></li>
+            <li><a href="#">الشروط والأحكام </a></li>
+            <li><a href="#">الأسئلة الشائعة</a></li>
+            <li><a href="#">سياسة الخصوصية</a></li>
+            <li><a href="#">اتصل بنا</a></li>
+          </ul>
+        </div>
+        <div class="mobile">
+          <a href="#"><img src="./images/footer/android.png" alt=".." /></a>
+          <a href="#"><img src="./images/footer/apple.png" alt=".." /></a>
+        </div>
+        <div class="credit">
+          <p>&copy; جميع الحقوق محغوظة متجر الكون 2020</p>
+
+          <div class="social flex-center">
+            <div class="social-icon wats">
+              <a class="flex-center" href="#">
+                <i class="fab fa-whatsapp"></i
+              ></a>
+            </div>
+            <div class="social-icon snap">
+              <a class="flex-center" href="#">
+                <i class="fab fa-snapchat-ghost"></i
+              ></a>
+            </div>
+            <div class="social-icon insta">
+              <a class="flex-center" href="#">
+                <i class="fab fa-instagram"></i
+              ></a>
+            </div>
+            <div class="social-icon twitter">
+              <a class="flex-center" href="#">
+                <i class="fab fa-twitter"></i
+              ></a>
+            </div>
+            <div class="social-icon facebook">
+              <a class="flex-center" href="#">
+                <i class="fab fa-facebook-f"></i
+              ></a>
+            </div>
+          </div>
+
+          <p>
+            صنع بكل الـ <i class="fas fa-heart"></i> في -
+            <a href="https://tasawk.com.sa/" target="_blank"
+              ><img src="./images/icons/footer.png" alt=".."
+            /></a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      id="up"
+      class="up flex-center"
+      onclick="window.scroll({top: 0,behavior: 'smooth'});"
+    >
+      <span class="lnr lnr-chevron-up"></span>
+    </div>
+
+    <script src="./js/vendor/jquery.min.js"></script>
+    <script src="./js/vendor/bootstrap.min.js"></script>
+    <script src="./js/vendor/bootstrap-select.min.js"></script>
+    <script src="./js/vendor/swiper-bundle.js"></script>
+    <script src="./js/vendor/aos.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

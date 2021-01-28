@@ -1,0 +1,438 @@
+.s-input,
+.bootstrap-select > .dropdown-toggle {
+    font-size: 14px;
+    font-family: ibmPlexMedium;
+    background-color: white;
+    border-radius: 50px;
+    border: 2px solid rgb(240, 240, 240);
+    padding-inline-start: 30px;
+    color: rgb(149, 149, 149);
+    outline: none;
+    transition: all 0.5s;
+
+    &:focus {
+        border-color: $color1;
+    }
+}
+
+.breadcrumb-container {
+    .breadcrumb {
+        padding: 0;
+        background-color: unset;
+        margin-top: 30px;
+    }
+    .breadcrumb-item {
+        padding-left: 0.5rem;
+        font-size: 14px;
+        font-family: ibmPlexMedium;
+
+        &::before {
+            padding-left: 0.5rem;
+            padding-right: unset;
+        }
+    }
+    .breadcrumb-item.active,
+    .breadcrumb-item {
+        color: rgba(149, 149, 149, 255);
+    }
+}
+
+.s-linear {
+    background-image: linear-gradient(-90deg, rgb(0, 203, 154) 0%, rgb(0, 153, 251) 100%);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 20px;
+        z-index: -1;
+        background-image: linear-gradient(90deg, rgb(0, 203, 154) 0%, rgb(0, 153, 251) 100%);
+        transition: all 0.5s;
+    }
+
+    &:hover {
+        &:before {
+            right: -150%;
+        }
+    }
+}
+
+.heading-txt {
+    margin: 0 0 30px 0;
+    font-size: 24px;
+    font-family: ibmPlexBold;
+}
+
+.p-txt {
+    margin: 0 0 40px 0;
+    font-size: 17px;
+    font-family: ibmPlexText;
+}
+
+.sign-containe {
+    width: 360px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.section-margin {
+    margin: 50px 0 120px;
+    text-align: center;
+}
+
+.section-margin.start {
+    text-align: start;
+}
+
+.form-item {
+    margin-bottom: 10px;
+    position: relative;
+
+    .s-input,
+    .bootstrap-select > .dropdown-toggle {
+        width: 100%;
+        height: 50px;
+        padding-inline-start: 50px;
+    }
+
+    .ico {
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        right: 25px;
+    }
+
+    .ico.eye,
+    .ico.camera,
+    .ico.left {
+        cursor: pointer;
+        right: unset;
+        left: 22px;
+
+        img {
+            max-width: 18px;
+        }
+    }
+
+    .ico.left {
+        cursor: default;
+    }
+}
+
+.bootstrap-select {
+    width: 100% !important;
+    .dropdown-toggle {
+        .filter-option {
+            padding-right: 0 !important;
+            text-align: start;
+            align-items: center;
+            display: flex;
+        }
+        .caret {
+            right: unset;
+            left: 25px;
+            color: rgba(134, 134, 134, 255);
+        }
+        &:after {
+            font-family: "Linearicons-Free";
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            border: none;
+            content: "\e874";
+            margin-left: 30px;
+            margin-bottom: 10px;
+        }
+
+        &:focus {
+            outline: none !important;
+            box-shadow: none;
+        }
+    }
+
+    .dropdown-menu {
+        border-radius: 7px;
+        text-align: start;
+        padding: 0;
+        & > li {
+            padding: 7px 30px 7px 0px;
+            & > a {
+                color: rgba(149, 149, 149, 255);
+            }
+        }
+        & > .active {
+            background-color: $color1;
+            a {
+                color: white;
+            }
+        }
+    }
+}
+
+.open > .dropdown-menu {
+    display: block;
+}
+
+.input-img {
+    position: relative;
+    .file-input,
+    .file-input2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+    }
+
+    .holder {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+
+.s-btns {
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    width: 100%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border: 2px solid rgb(240, 240, 240);
+    cursor: pointer;
+    font-size: 17px;
+    font-family: ibmPlexBold;
+}
+
+.s-btn {
+    border: none;
+    color: white;
+    margin-bottom: 10px;
+
+    &:hover {
+        color: white;
+    }
+}
+
+.s-linkbtn {
+    background: white;
+
+    &:before {
+        right: -150%;
+        border-radius: 0;
+        transition: all 1s;
+    }
+
+    &:after {
+        content: "";
+        border-radius: 0;
+        position: absolute;
+        top: 0;
+        left: -150%;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        background-image: linear-gradient(-90deg, rgb(0, 203, 154) 0%, rgb(0, 153, 251) 100%);
+        transition: all 1s;
+    }
+
+    &:hover {
+        color: white;
+        border-color: transparent;
+        &:before {
+            right: 0;
+        }
+        &:after {
+            left: 0;
+        }
+    }
+}
+
+.s-linkbtn.active {
+    color: white;
+    border-color: transparent;
+    &:before {
+        right: 0;
+    }
+    &:after {
+        left: 0;
+    }
+}
+
+.acc-nav {
+    width: 260px;
+    min-width: max-content;
+    border: 2px solid rgb(240, 240, 240);
+    border-radius: 15px;
+    padding: 20px 20px 20px 0;
+    margin-inline-end: 30px;
+
+    @media (max-width: 768px) {
+        margin: 0 0 50px;
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    img {
+        max-width: 20px;
+        max-height: 20px;
+        margin-inline-end: 12px;
+    }
+
+    li {
+        font-size: 18px;
+        color: rgba(153, 153, 153, 255);
+        font-family: ibmPlexSemiBold;
+        margin-bottom: 20px;
+    }
+}
+
+.acc-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .acc-body {
+        margin: 0;
+
+        input {
+            padding-inline-start: 30px;
+        }
+    }
+}
+
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+
+    a {
+        height: 47px;
+        width: 42px;
+        margin: 0 5px;
+        border-radius: 5px;
+        color: rgba(149, 149, 149, 255);
+        font-size: 16px;
+        font-family: ibmPlexMedium;
+    }
+
+    .active {
+        &:after {
+            display: none;
+        }
+    }
+
+    .disabled {
+        background-color: #f0f0f0;
+        cursor: not-allowed;
+
+        &:after,
+        &:before {
+            display: none;
+        }
+
+        &:hover {
+            border-color: #f0f0f0;
+        }
+    }
+}
+
+.s-filter {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 20px;
+
+    a {
+        width: unset;
+        padding: 0 25px;
+        font-family: inherit;
+        margin-inline-end: 10px;
+        height: 45px;
+    }
+
+    @media (max-width: 576px) {
+        margin: 25px 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            margin: 7px 0;
+            width: 90%;
+        }
+    }
+}
+
+.red-btn {
+    background-color: #fc4547;
+    color: white;
+    border: none;
+    &:hover {
+        background-color: red;
+    }
+}
+
+.green-btn {
+    background-color: #2ed54a;
+    color: white;
+    border:none;
+
+    &:hover {
+        background-color: #2ed54a;
+    }
+
+  
+    &:after {
+        background-image: linear-gradient(-90deg, #2ed54a 0%, #00cb9a 100%);
+    }
+}
+
+.gray-btn {
+    background-color: #959595;
+    color: white;
+    border:none;
+
+    &:hover {
+        background-color: #959595;
+    }
+
+  
+    &:after {
+        background-image: linear-gradient(-90deg, #2ed54a 0%, #00cb9a 100%);
+        border-radius:100%;
+    }
+}
+
+.blue-btn {
+    background-color: $color1;
+    color: white;
+    border: none;
+
+    &:hover {
+        background-color: $color1;
+    }
+}
