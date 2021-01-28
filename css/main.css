@@ -2861,6 +2861,7 @@ header .swiper-container .swiper-slide img {
   border-radius: 15px;
   resize: none;
   padding-top: 10px;
+  padding-inline-start: 20px;
 }
 
 .haraj-post .add-message .s-btn {
