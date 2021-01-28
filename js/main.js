@@ -67,17 +67,16 @@ $(window).on("load", function () {
   });
 
   $(".more-messages").on("click", function (e) {
-    console.log(e.target);
     if (e.target.classList.contains("show")) {
       $(this).addClass("slide-active");
       $(this).children(".more-messages-body").slideDown();
-      $(this).children('.show').fadeOut(300);
-      $(this).children('.hide').fadeIn(300);
-    }else if(e.target.classList.contains("hide")){
+      $(this).children(".show").fadeOut(300);
+      $(this).children(".hide").fadeIn(300);
+    } else if (e.target.classList.contains("hide")) {
       $(this).removeClass("slide-active");
       $(this).children(".more-messages-body").slideUp();
-      $(this).children('.hide').fadeOut(300);
-      $(this).children('.show').fadeIn(300);
+      $(this).children(".hide").fadeOut(300);
+      $(this).children(".show").fadeIn(300);
     }
   });
 
@@ -110,6 +109,16 @@ $(window).on("load", function () {
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+    },
+  });
+
+  var mySwiper = new Swiper(".haraj-post .swiper-container", {
+    // Optional parameters
+    direction: "horizontal",
+    loop: true,
+    updateOnWindowResize: true,
+    autoplay: {
+      delay: 5000,
     },
   });
 
@@ -203,6 +212,40 @@ $(window).on("load", function () {
 
       reader.readAsDataURL(input.files[0]); // convert to base64 string
     }
+  }
+
+  $(".file-input3").on("change", function (e) {
+    let parent = $(e.target.parentNode.parentNode);
+    let holder = parent.find(".image-holder")[0];
+    readURL2(this, holder);
+  });
+
+  function readURL2(input, holder) {
+    if (input.files && input.files[0]) {
+      let out = "";
+      for (let index = 0; index < input.files.length; index++) {
+        var reader = new FileReader();
+        let src = document.createElement("div");
+        src.classList.add("image");
+        let img = document.createElement("img");
+        let del = document.createElement("div");
+        del.classList.add("deleteImg");
+        del.innerHTML = '<span class="lnr lnr-trash"></span>';
+
+        reader.onload = function (e) {
+          $(img).attr("src", e.target.result);
+          $(img).attr("alt", "..");
+        };
+
+        src.appendChild(img);
+        src.appendChild(del);
+        holder.appendChild(src);
+        reader.readAsDataURL(input.files[index]);
+      }
+    }
+    $(".deleteImg").on("click", (e) => {
+      //input.files[0] = '';
+    });
   }
 
   $("#imgInp").change(function () {
