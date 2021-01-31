@@ -214,6 +214,7 @@ $(window).on("load", function () {
     }
   }
 
+  // add post page file input
   $(".file-input3").on("change", function (e) {
     let parent = $(e.target.parentNode.parentNode);
     let holder = parent.find(".image-holder")[0];
@@ -248,11 +249,7 @@ $(window).on("load", function () {
     });
   }
 
-  $("#imgInp").change(function () {
-    readURL(this);
-  });
-
-  // forgoy-verify page --- input jump
+  // forgot-verify page --- input jump
   if ($(".input-verify")[0]) {
     addInputEvent();
   }
