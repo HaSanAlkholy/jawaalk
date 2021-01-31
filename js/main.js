@@ -244,7 +244,8 @@ $(window).on("load", function () {
       }
     }
     $(".deleteImg").on("click", (e) => {
-      //input.files[0] = '';
+      // input.files = {};
+      // console.log(input.files)
     });
   }
 
@@ -254,16 +255,35 @@ $(window).on("load", function () {
 
   // forgoy-verify page --- input jump
   if ($(".input-verify")[0]) {
-    inputJumb();
+    addInputEvent();
   }
-
-  function inputJumb() {
+  
+  function addInputEvent() {
     $(".input-verify")[0].select();
-
-    $(".input-verify").on("input", (e) => {
-      if (e.target.value && e.target.nextElementSibling) {
-        e.target.nextElementSibling.select();
-      }
+  
+    $(".input-verify").on("keydown", (e) => {
+      inputJumb(e);
+    });
+    $(".input-verify").on("keyup", (e) => {
+      inputJumb(e);
     });
   }
+  
+  function inputJumb(e){
+    if (e.type == 'keydown' && !e.target.value  && e.keyCode === 8 &&  e.target.previousElementSibling) {
+      e.preventDefault();
+      e.target.previousElementSibling.select();
+    }else if(e.type == 'keydown' && e.keyCode === 32){
+      e.preventDefault();
+    }else if (e.type == 'keyup' && e.target.nextElementSibling && e.target.value  && e.keyCode !== 8) {
+      e.target.nextElementSibling.select();
+    }
+  }
+
+  $('.close-alert').click(function (e) { 
+    e.preventDefault();
+    $('.alert-box').removeClass('active');
+  });
 });
+
+
