@@ -243,9 +243,8 @@ $(window).on("load", function () {
         reader.readAsDataURL(input.files[index]);
       }
     }
-    $(".deleteImg").on("click", (e) => {
-      // input.files = {};
-      // console.log(input.files)
+    $(".deleteImg").on("click", function (e) {
+      $(this).parent().remove();
     });
   }
 
@@ -257,10 +256,10 @@ $(window).on("load", function () {
   if ($(".input-verify")[0]) {
     addInputEvent();
   }
-  
+
   function addInputEvent() {
     $(".input-verify")[0].select();
-  
+
     $(".input-verify").on("keydown", (e) => {
       inputJumb(e);
     });
@@ -268,22 +267,30 @@ $(window).on("load", function () {
       inputJumb(e);
     });
   }
-  
-  function inputJumb(e){
-    if (e.type == 'keydown' && !e.target.value  && e.keyCode === 8 &&  e.target.previousElementSibling) {
+
+  function inputJumb(e) {
+    if (
+      e.type == "keydown" &&
+      !e.target.value &&
+      e.keyCode === 8 &&
+      e.target.previousElementSibling
+    ) {
       e.preventDefault();
       e.target.previousElementSibling.select();
-    }else if(e.type == 'keydown' && e.keyCode === 32){
+    } else if (e.type == "keydown" && e.keyCode === 32) {
       e.preventDefault();
-    }else if (e.type == 'keyup' && e.target.nextElementSibling && e.target.value  && e.keyCode !== 8) {
+    } else if (
+      e.type == "keyup" &&
+      e.target.nextElementSibling &&
+      e.target.value &&
+      e.keyCode !== 8
+    ) {
       e.target.nextElementSibling.select();
     }
   }
 
-  $('.close-alert').click(function (e) { 
+  $(".close-alert").click(function (e) {
     e.preventDefault();
-    $('.alert-box').removeClass('active');
+    $(".alert-box").removeClass("active");
   });
 });
-
-
