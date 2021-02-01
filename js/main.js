@@ -291,4 +291,9 @@ $(window).on("load", function () {
     $(".alert-box").removeClass("active");
     $('html').removeClass('overflow');
   });
+
+  $('.acc-nav-head').click(function (e) { 
+    $(this).parent().find('ul').slideToggle();
+    $(this).toggleClass('active-head');
+  });
 });

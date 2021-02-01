@@ -35,6 +35,10 @@
     .breadcrumb-item {
         color: rgba(149, 149, 149, 255);
     }
+
+    @media(max-width:576px){
+        display:none;
+    }
 }
 
 .s-linear {
@@ -277,15 +281,16 @@
     min-width: max-content;
     border: 2px solid rgb(240, 240, 240);
     border-radius: 15px;
-    padding: 20px 20px 20px 0;
+    padding: 20px 20px 0 0;
     margin-inline-end: 30px;
 
     @media (max-width: 768px) {
-        margin: 0 0 50px;
+        margin: 0 0 30px;
     }
 
     ul {
         padding: 0;
+        padding-bottom:15px;
     }
 
     img {
@@ -300,6 +305,43 @@
         font-family: ibmPlexSemiBold;
         margin-bottom: 20px;
     }
+
+    .acc-nav-head{
+        color: rgba(153, 153, 153, 255);
+        font-family: ibmPlexSemiBold;
+        margin-bottom: 20px;
+        align-items: center;
+        display: flex;
+        font-size: 20px;
+        justify-content: flex-start;
+        cursor: pointer;
+        display:none;
+        
+        span{
+            transition: all 0.5s;
+            margin-right: auto;
+            margin-left: 20px;
+            font-size: 11px;
+        }
+    }
+
+    
+    @media(max-width:576px){
+        .acc-nav-head{
+            display: flex;
+        }
+
+        ul{
+            display: none;
+        }
+    }
+
+    .acc-nav-head.active-head{
+        span{
+            transform: rotate(180deg);
+        }
+    }
+
 }
 
 .acc-content {

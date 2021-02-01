@@ -179,7 +179,7 @@
 }
 
 .product {
-    padding-bottom: 10px;
+    padding-bottom: 30px;
     max-width: 260px;
     width: 100%;
     position: relative;
@@ -364,7 +364,7 @@
 
 .products {
     display: grid;
-    gap: 30px;
+    gap: 15px;
     grid-template-columns: repeat(4, 1fr);
 
     @media (max-width: 1200px) {
@@ -1067,6 +1067,7 @@ header {
         }
     }
     @media (max-width: 576px) {
+        margin: 15px 0 90px 0;
         .banners-content {
             justify-content: space-between;
         }
@@ -1081,6 +1082,7 @@ header {
     transition: all 0.5s;
     flex-direction: column;
     margin-bottom: 30px;
+    border-radius: 15px;
 
     a {
         flex-direction: column;
@@ -1109,12 +1111,12 @@ header {
         margin-bottom: 15px;
 
         img {
-            max-width: 40%;
+            max-width: 35%;
             margin-bottom: 10px;
         }
 
         h3 {
-            font-size: 18px;
+            font-size: 15px;
         }
     }
 }

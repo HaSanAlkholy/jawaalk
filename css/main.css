@@ -219,6 +219,12 @@ ul {
   color: #959595;
 }
 
+@media (max-width: 576px) {
+  .breadcrumb-container {
+    display: none;
+  }
+}
+
 .s-linear {
   background-image: linear-gradient(-90deg, #00cb9a 0%, #0099fb 100%);
   position: relative;
@@ -470,18 +476,19 @@ ul {
   min-width: max-content;
   border: 2px solid #f0f0f0;
   border-radius: 15px;
-  padding: 20px 20px 20px 0;
+  padding: 20px 20px 0 0;
   margin-inline-end: 30px;
 }
 
 @media (max-width: 768px) {
   .acc-nav {
-    margin: 0 0 50px;
+    margin: 0 0 30px;
   }
 }
 
 .acc-nav ul {
   padding: 0;
+  padding-bottom: 15px;
 }
 
 .acc-nav img {
@@ -495,6 +502,38 @@ ul {
   color: #999999;
   font-family: ibmPlexSemiBold;
   margin-bottom: 20px;
+}
+
+.acc-nav .acc-nav-head {
+  color: #999999;
+  font-family: ibmPlexSemiBold;
+  margin-bottom: 20px;
+  align-items: center;
+  display: flex;
+  font-size: 20px;
+  justify-content: flex-start;
+  cursor: pointer;
+  display: none;
+}
+
+.acc-nav .acc-nav-head span {
+  transition: all 0.5s;
+  margin-right: auto;
+  margin-left: 20px;
+  font-size: 11px;
+}
+
+@media (max-width: 576px) {
+  .acc-nav .acc-nav-head {
+    display: flex;
+  }
+  .acc-nav ul {
+    display: none;
+  }
+}
+
+.acc-nav .acc-nav-head.active-head span {
+  transform: rotate(180deg);
 }
 
 .acc-content {
@@ -829,7 +868,7 @@ ul {
 }
 
 .product {
-  padding-bottom: 10px;
+  padding-bottom: 30px;
   max-width: 260px;
   width: 100%;
   position: relative;
@@ -1005,7 +1044,7 @@ ul {
 
 .products {
   display: grid;
-  gap: 30px;
+  gap: 15px;
   grid-template-columns: repeat(4, 1fr);
 }
 
@@ -1721,6 +1760,9 @@ header .swiper-container .swiper-slide img {
 }
 
 @media (max-width: 576px) {
+  .home-banners {
+    margin: 15px 0 90px 0;
+  }
   .home-banners .banners-content {
     justify-content: space-between;
   }
@@ -1734,6 +1776,7 @@ header .swiper-container .swiper-slide img {
   transition: all 0.5s;
   flex-direction: column;
   margin-bottom: 30px;
+  border-radius: 15px;
 }
 
 .banner a {
@@ -1764,11 +1807,11 @@ header .swiper-container .swiper-slide img {
     margin-bottom: 15px;
   }
   .banner img {
-    max-width: 40%;
+    max-width: 35%;
     margin-bottom: 10px;
   }
   .banner h3 {
-    font-size: 18px;
+    font-size: 15px;
   }
 }
 
