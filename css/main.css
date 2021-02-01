@@ -830,7 +830,8 @@ ul {
 
 .product {
   padding-bottom: 10px;
-  width: 260px;
+  max-width: 260px;
+  width: 100%;
   position: relative;
 }
 
@@ -953,8 +954,15 @@ ul {
     margin-left: auto;
     margin-right: auto;
   }
-  .product .product-disc {
-    text-align: center;
+  .product .product-img {
+    height: auto;
+  }
+  .product .product-disc .product-btns .favourite {
+    width: 30px;
+    height: 30px;
+  }
+  .product .product-disc .product-btns .favourite span {
+    font-size: 15px;
   }
 }
 
@@ -964,6 +972,7 @@ ul {
   padding-bottom: 20px;
   border-bottom: 1px solid #f7f7f7;
   margin-bottom: 15px;
+  max-width: unset;
 }
 
 .ads-products .product .product-img {
@@ -1012,12 +1021,6 @@ ul {
   }
 }
 
-@media (max-width: 576px) {
-  .products {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
 .products.products-3 {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -1025,12 +1028,6 @@ ul {
 @media (max-width: 768px) {
   .products.products-3 {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 576px) {
-  .products.products-3 {
-    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -1193,10 +1190,11 @@ nav .nav-bottom .nav-icons .nav-icon {
 
 nav .nav-bottom .nav-icons .nav-icon .ico-btn {
   color: black;
-  font-size: 24px;
+  font-size: 18px;
   cursor: pointer;
   transition: all 0.5s;
   position: relative;
+  line-height: 1;
 }
 
 nav .nav-bottom .nav-icons .nav-icon .ico-btn .green-dot {
@@ -1207,6 +1205,10 @@ nav .nav-bottom .nav-icons .nav-icon .ico-btn .green-dot {
   position: absolute;
   top: 4px;
   right: 0px;
+}
+
+nav .nav-bottom .nav-icons .nav-icon .ico-btn img {
+  vertical-align: baseline;
 }
 
 nav .nav-bottom .nav-icons .nav-icon:last-of-type {
@@ -1718,6 +1720,12 @@ header .swiper-container .swiper-slide img {
   }
 }
 
+@media (max-width: 576px) {
+  .home-banners .banners-content {
+    justify-content: space-between;
+  }
+}
+
 .banner {
   border-radius: 20px;
   width: 262px;
@@ -1746,6 +1754,22 @@ header .swiper-container .swiper-slide img {
   margin: 0;
   font-size: 24px;
   font-family: ibmPlexBold;
+}
+
+@media (max-width: 576px) {
+  .banner {
+    max-width: 48%;
+    height: unset;
+    padding: 30px 0;
+    margin-bottom: 15px;
+  }
+  .banner img {
+    max-width: 40%;
+    margin-bottom: 10px;
+  }
+  .banner h3 {
+    font-size: 18px;
+  }
 }
 
 .alert-box {
@@ -2175,13 +2199,18 @@ header .swiper-container .swiper-slide img {
   margin-top: 60px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
 }
 
 @media (max-width: 1200px) {
   .account .account-body {
     justify-content: space-around;
+  }
+}
+
+@media (max-width: 576px) {
+  .account .account-body {
+    justify-content: space-between;
   }
 }
 
@@ -2197,6 +2226,7 @@ header .swiper-container .swiper-slide img {
   border-radius: 15px;
   padding: 30px;
   max-width: 100%;
+  height: 100%;
 }
 
 .account .account-item .item-img {
@@ -2214,6 +2244,19 @@ header .swiper-container .swiper-slide img {
 
 .account .account-item:hover h2 {
   color: #0099fb;
+}
+
+@media (max-width: 576px) {
+  .account .account-item {
+    width: 47%;
+    min-width: unset;
+  }
+  .account .account-item .item-body {
+    padding: 10px;
+  }
+  .account .account-item h2 {
+    font-size: 15px;
+  }
 }
 
 .acc-edit h2 {
@@ -2398,20 +2441,20 @@ header .swiper-container .swiper-slide img {
 }
 
 @media (max-width: 576px) {
-  .message {
+  .acc-msg .message {
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
     padding: 10px 0 25px 0;
   }
-  .message .check {
+  .acc-msg .message .check {
     position: absolute;
     top: 15px;
     right: 15px;
     margin: 0;
   }
-  .message .msg-img {
+  .acc-msg .message .msg-img {
     margin: 0 0 10px 0;
   }
 }
@@ -2504,6 +2547,12 @@ header .swiper-container .swiper-slide img {
   font-size: 22px;
   margin: 0 0 30px 0;
   font-family: ibmPlexBold;
+}
+
+@media (max-width: 576px) {
+  .haraj .banner {
+    height: 150px;
+  }
 }
 
 .search-page .search-content {
@@ -2910,7 +2959,7 @@ header .swiper-container .swiper-slide img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #EE3837;
+  background-color: #ee3837;
   height: 25px;
   width: 25px;
   color: white;
@@ -2925,6 +2974,7 @@ header .swiper-container .swiper-slide img {
 footer {
   padding: 55px 0 35px;
   background-color: #fbfbfb;
+  background-image: linear-gradient(0deg, white 0%, #f7f7f7 100%);
   text-align: center;
 }
 
@@ -2947,6 +2997,7 @@ footer .mobile {
 
 footer .mobile img {
   margin: 0 5px 15px;
+  max-width: 43%;
 }
 
 footer .credit {
@@ -2956,7 +3007,9 @@ footer .credit {
 }
 
 footer .credit p {
-  font-size: 15px;
+  font-size: 14px;
+  color: #7c7171;
+  font-family: ibmPlexText;
   width: 30%;
 }
 

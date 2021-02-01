@@ -148,7 +148,7 @@ $(window).on("load", function () {
       },
       // when window width is >= 480px
       0: {
-        slidesPerView: 1,
+        slidesPerView: 2,
         spaceBetween: 15,
       },
     },
@@ -289,5 +289,6 @@ $(window).on("load", function () {
   $(".close-alert").click(function (e) {
     e.preventDefault();
     $(".alert-box").removeClass("active");
+    $('html').removeClass('overflow');
   });
 });
