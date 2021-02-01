@@ -474,10 +474,10 @@ ul {
 .acc-nav {
   width: 260px;
   min-width: max-content;
-  border: 2px solid #f0f0f0;
-  border-radius: 15px;
-  padding: 20px 20px 0 0;
   margin-inline-end: 30px;
+  border: 2px solid #f0f0f0;
+  padding: 15px 20px 0 0;
+  border-radius: 30px;
 }
 
 @media (max-width: 768px) {
@@ -507,10 +507,10 @@ ul {
 .acc-nav .acc-nav-head {
   color: #999999;
   font-family: ibmPlexSemiBold;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  font-size: 17px;
   align-items: center;
   display: flex;
-  font-size: 20px;
   justify-content: flex-start;
   cursor: pointer;
   display: none;
@@ -524,6 +524,9 @@ ul {
 }
 
 @media (max-width: 576px) {
+  .acc-nav {
+    width: 330px;
+  }
   .acc-nav .acc-nav-head {
     display: flex;
   }

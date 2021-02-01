@@ -36,8 +36,8 @@
         color: rgba(149, 149, 149, 255);
     }
 
-    @media(max-width:576px){
-        display:none;
+    @media (max-width: 576px) {
+        display: none;
     }
 }
 
@@ -279,10 +279,10 @@
 .acc-nav {
     width: 260px;
     min-width: max-content;
-    border: 2px solid rgb(240, 240, 240);
-    border-radius: 15px;
-    padding: 20px 20px 0 0;
     margin-inline-end: 30px;
+    border: 2px solid #f0f0f0;
+    padding: 15px 20px 0 0;
+    border-radius: 30px;
 
     @media (max-width: 768px) {
         margin: 0 0 30px;
@@ -290,7 +290,7 @@
 
     ul {
         padding: 0;
-        padding-bottom:15px;
+        padding-bottom: 15px;
     }
 
     img {
@@ -306,18 +306,18 @@
         margin-bottom: 20px;
     }
 
-    .acc-nav-head{
+    .acc-nav-head {
         color: rgba(153, 153, 153, 255);
         font-family: ibmPlexSemiBold;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
+        font-size: 17px;
         align-items: center;
         display: flex;
-        font-size: 20px;
         justify-content: flex-start;
         cursor: pointer;
-        display:none;
-        
-        span{
+        display: none;
+
+        span {
             transition: all 0.5s;
             margin-right: auto;
             margin-left: 20px;
@@ -325,23 +325,23 @@
         }
     }
 
-    
-    @media(max-width:576px){
-        .acc-nav-head{
+    @media (max-width: 576px) {
+        width: 330px;
+
+        .acc-nav-head {
             display: flex;
         }
 
-        ul{
+        ul {
             display: none;
         }
     }
 
-    .acc-nav-head.active-head{
-        span{
+    .acc-nav-head.active-head {
+        span {
             transform: rotate(180deg);
         }
     }
-
 }
 
 .acc-content {
@@ -441,13 +441,12 @@
 .green-btn {
     background-color: #2ed54a;
     color: white;
-    border:none;
+    border: none;
 
     &:hover {
         background-color: #2ed54a;
     }
 
-  
     &:after {
         background-image: linear-gradient(-90deg, #2ed54a 0%, #00cb9a 100%);
     }
@@ -456,16 +455,15 @@
 .gray-btn {
     background-color: #959595;
     color: white;
-    border:none;
+    border: none;
 
     &:hover {
         background-color: #959595;
     }
 
-  
     &:after {
         background-image: linear-gradient(-90deg, #2ed54a 0%, #00cb9a 100%);
-        border-radius:100%;
+        border-radius: 100%;
     }
 }
 
